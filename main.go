@@ -133,7 +133,6 @@ import (
 		id := c.Param("id")
 
 		db.Delete(&TodoModel{}, id)
-
 		c.JSON(http.StatusOK, gin.H{
 			"message": "Todo deleted successfully",
 		})
